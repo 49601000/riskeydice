@@ -107,7 +107,7 @@
     <div class="fortune-text dash" id="fortuneText">——</div>
   </div>
 
-  <button class="roll-btn" id="rollBtn" onclick="roll()">サ イ コ ロ を 振 る</button>
+  <button class="roll-btn" id="rollBtn" onclick="roll()">サイコロを<br>振る</button>
   <div class="count" id="countLabel"></div>
 
   <script>
@@ -130,12 +130,9 @@
         ft.textContent = '大凶';
         ft.classList.add('daikyo');
         btn.classList.add('daikyo-btn');
-      } else if (n === 20) {
+      } else {
         daikichi++;
         ft.textContent = '大吉';
-      } else {
-        ft.textContent = '——';
-        ft.classList.add('dash');
       }
 
       document.getElementById('countLabel').textContent =
