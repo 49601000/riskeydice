@@ -76,14 +76,6 @@
     .roll-btn:hover { background: #fff; color: #111; }
     .roll-btn:active { transform: scale(0.97); }
 
-    .roll-btn.daikyo-btn {
-      background: #111;
-      color: #cc2200;
-      border-color: #cc2200;
-    }
-
-    .roll-btn.daikyo-btn:hover { background: #cc2200; color: #fff; }
-
     .count {
       margin-top: 20px;
       font-size: 11px;
@@ -118,10 +110,8 @@
       total++;
 
       const ft = document.getElementById('fortuneText');
-      const btn = document.getElementById('rollBtn');
 
       ft.classList.remove('revealed', 'daikyo', 'dash');
-      btn.classList.remove('daikyo-btn');
       void ft.offsetWidth;
       ft.classList.add('revealed');
 
@@ -129,7 +119,6 @@
         daikyo++;
         ft.textContent = '大凶';
         ft.classList.add('daikyo');
-        btn.classList.add('daikyo-btn');
       } else {
         daikichi++;
         ft.textContent = '大吉';
